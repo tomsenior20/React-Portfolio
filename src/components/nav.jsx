@@ -2,6 +2,7 @@ import React from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import '../static/nav.css'
 
 export default function Nav() {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -15,7 +16,7 @@ export default function Nav() {
     return (
         <nav className="App top-0 fixed flex w-full justify-between p-5 items-center h-[100px]">
             <div className="flex justify-start w-4/5 sm:w-2/5 p-3">
-                <h1 className="text-xl text-white">Tom Senior</h1>
+                <h1 className="navTitle text-xl text-white">Tom Senior</h1>
             </div>
             <div className="hidden sm:block w-3/5 p-3">
                 <ul className="hidden md:flex flex-row justify-around">
