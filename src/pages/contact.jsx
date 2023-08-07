@@ -24,8 +24,12 @@ export default function Contact() {
                     <AiOutlineArrowDown className="text-center  w-[40px] h-[100%] text-white flex md:hidden" />
                 </div>
                 <div className="socialMediaLinks flex rounded-md flex-row items-center justify-around w-[90%] h-[100px] md:h-[200px] my-3 md:my-8 md:w-[40%]">
-                    <FaLinkedin className="socialIcons w-[60px] h-[60px] text-white" />
-                    <FaGithub className="socialIcons w-[60px] h-[60px] text-white" />
+                    <a href="https://www.linkedin.com/in/tom-senior20/" target="_blank" rel="noopener noreferrer">
+                        <FaLinkedin className="socialIcons w-[60px] h-[60px] text-white" />
+                    </a>
+                    <a href="https://github.com/tomsenior20" target="_blank" rel="noopener noreferrer">
+                        <FaGithub className="socialIcons w-[60px] h-[60px] text-white" />
+                    </a>
                 </div>
             </div>
         </>
