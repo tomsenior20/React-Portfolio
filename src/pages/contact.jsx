@@ -1,6 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet'
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
+import { AiOutlineArrowRight, AiOutlineArrowDown } from 'react-icons/ai';
+import '../static/contact.css'
 
 export default function Contact() {
     return (
@@ -8,18 +10,22 @@ export default function Contact() {
             <Helmet>
                 <title>Contact Page</title>
             </Helmet>
-            <div className="pageWelcomeContainer mt-[100px] min-h-[500px] p-3 flex items-center justify-center">
-                <div>
+            <div className="pageWelcomeContainer mt-[100px] min-h-[500px] md:flex-row flex-col p-3 flex w-full items-center justify-center">
+                <div className="text-center">
                     <h1 className="PageWelcomeHeader text-white text-5xl ">Contact Me Page</h1>
                 </div>
             </div>
-            <div className="socialMediaLinksContainer flex flex-col my-5 md:flex-row justify-around">
-                <div className="socialMediaHeader text-center p-8 my-8 w-full md:w-[50%]">
-                    <p className="text-white text-3xl p-4">Social Media Places</p>
+            <div className="socialMediaLinksContainer flex flex-col md:flex-row p-3 my-10 md:my-[5rem] w-[100%] justify-center">
+                <div className="socialMediaHeader rounded-md text-center w-[90%] h-[100px] md:h-[200px] my-3 md:my-8 flex justify-center items-center w-full md:w-[40%]">
+                    <p className="socialMediaText text-white text-center text-4xl">Social Media</p>
                 </div>
-                <div className="socialMediaLinks flex flex-row items-center justify-evenly w-full my-8 md:w-[50%]">
-                    <FaLinkedin className="w-[60px] h-[60px] text-white" />
-                    <FaGithub className="w-[60px] h-[60px] text-white" />
+                <div className="socialArrowBeteen flex justify-center items-center h-[100px] md:h-[200px] my-3 md:my-8 w-[90%] md:w-[10%]">
+                    <AiOutlineArrowRight className="text-center  w-[40px] h-[40px] text-white hidden md:flex" />
+                    <AiOutlineArrowDown className="text-center  w-[40px] h-[100%] text-white flex md:hidden" />
+                </div>
+                <div className="socialMediaLinks flex rounded-md flex-row items-center justify-around w-[90%] h-[100px] md:h-[200px] my-3 md:my-8 md:w-[40%]">
+                    <FaLinkedin className="socialIcons w-[60px] h-[60px] text-white" />
+                    <FaGithub className="socialIcons w-[60px] h-[60px] text-white" />
                 </div>
             </div>
         </>

@@ -1,0 +1,43 @@
+.socialMediaHeader,.socialMediaLinks{
+    background: #eeeeee26;
+    margin: auto;
+}
+.socialArrowBeteen{
+    margin: auto;
+}
+
+.socialMediaText{
+    letter-spacing: 0.05em;   
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 2;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    font-weight: 700;
+}
+
+.socialIcons:hover{
+ animation: pulse 1s infinite;
+}
+/* Creates the pulsing on Hover Animation */
+@keyframes pulse {
+0% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+}
+50% {
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+100% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+}
+}
