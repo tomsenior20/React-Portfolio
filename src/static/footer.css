@@ -1,5 +1,6 @@
 footer{
-    background:rgba(39, 34, 82, 0.45);
+    background:linear-gradient(90deg ,rgb(35, 38, 44),rgba(35, 38, 75,0.5));
+    margin-top:50px;
 }
 
 .copyrightText{

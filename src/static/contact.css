@@ -1,5 +1,5 @@
 .socialMediaHeader,.socialMediaLinks{
-    background: #eeeeee26;
+    background: linear-gradient(90deg, rgb(69, 66, 66), rgba(89, 89, 89,1));
     margin: auto;
     border: 1px solid rgba(143, 142, 142, 0.95);
 }
@@ -13,6 +13,14 @@
     line-height: 2;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
     font-weight: 700;
+}
+
+.PageWelcomeHeader{
+    letter-spacing: 0.05em;   
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 2;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    font-weight: 700;  
 }
 
 .socialIcons:hover{

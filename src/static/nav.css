@@ -1,5 +1,9 @@
-nav{
-    background:rgba(39, 34, 82, 0.45);
+.breakPoint{
+    color:rgb(98, 78, 201);
+}
+
+.mobileLinkMenu{
+    background:linear-gradient(90deg ,rgb(35, 38, 44),rgba(35, 38, 75,1));
 }
 
 .navTitle{

@@ -5,6 +5,10 @@ import { Link } from 'react-router-dom'
 import '../static/nav.css'
 
 export default function Nav() {
+    const icons = {
+        startBreakPoint: "< ",
+        endBreakPoint: " />"
+    }
     const [menuOpen, setMenuOpen] = useState(false);
     const handleMenuToggle = () => {
         setMenuOpen(!menuOpen)
@@ -15,8 +19,10 @@ export default function Nav() {
     }
     return (
         <nav className="App top-0 fixed flex w-full justify-between p-5 items-center h-[100px]">
-            <div className="flex justify-start w-4/5 sm:w-2/5 p-3">
-                <h1 className="navTitle text-xl text-white">Tom Senior</h1>
+            <div className="flex justify-start items-center w-4/5 sm:w-2/5 p-3">
+                <span className="breakPoint mx-2 text-white text-2xl">{icons.startBreakPoint}</span>
+                <h1 className="navTitle text-xl md:text-3xl text-white">Tom Senior</h1>
+                <span className="breakPoint mx-2 text-4xl text-white">{icons.endBreakPoint}</span>
             </div>
             <div className="hidden sm:block w-3/5 p-3">
                 <ul className="hidden md:flex flex-row justify-around">
@@ -36,15 +42,15 @@ export default function Nav() {
                 {!menuOpen ? <FaBars /> : <FaTimes />}
             </div>
             {/* Mobile Menu */}
-            <ul className={!menuOpen ? "hidden" : "absolute top-0 left-0 w-full flex bg-[#fcba03] flex-col h-screen justify-center items-center"}>
+            <ul className={!menuOpen ? "hidden" : "mobileLinkMenu absolute top-0 left-0 w-full flex flex-col h-screen justify-center items-center"}>
                 {/* Add your mobile menu items here */}
-                <li>
+                <li className="leading-7 my-2">
                     <Link to='/' className="text-lg text-white" onClick={handleMobileLinkClick} >Home</Link>
                 </li>
-                <li>
+                <li className="leading-7 my-2">
                     <Link to='/about' className="text-lg text-white" onClick={handleMobileLinkClick}>About</Link>
                 </li>
-                <li>
+                <li className="leading-7 my-2">
                     <Link to='/contact' className="text-lg text-white" onClick={handleMobileLinkClick}>Contact</Link>
                 </li>
                 {/* Add more items as needed */}
