@@ -15,7 +15,8 @@
 }
 
 .socialIcons:hover{
- animation: pulse 1s infinite;
+ animation: pulse 1s ease-in;
+ -webkit-animation: pulse 1s ease-in;
 }
 /* Creates the pulsing on Hover Animation */
 @keyframes pulse {
@@ -27,11 +28,11 @@
     -o-transform: scale(1);
 }
 50% {
-    transform: scale(1.1);
-    -webkit-transform: scale(1.1);
-    -moz-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    -o-transform: scale(1.1);
+    transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    -moz-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    -o-transform: scale(1.5);
 }
 100% {
     transform: scale(1);
