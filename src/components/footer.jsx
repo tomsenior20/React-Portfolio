@@ -24,7 +24,7 @@ export default function Footer() {
 
     }, []);
     return (
-        <footer className="flex flex-row justify-between items-center p-4 w-full mt-auto">
+        <footer className="flex flex-row justify-between items-center mt-[1rem] md:mt-[1rem] p-4 w-full mt-auto">
             <div className="flex items-center justify-center md:flex-row flex-col p-3">
                 <p className="copyrightText text-white text-lg mx-1">Copyright:</p>
                 <p className="copyrightText text-white text-lg mx-1">Tom Senior</p>

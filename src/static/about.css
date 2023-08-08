@@ -1,5 +1,5 @@
 .contactMainHeader{
-    letter-spacing: 0.05em;   
+    letter-spacing: 0.0075em;  
     font-family: Arial, Helvetica, sans-serif;
     line-height: 2.5;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
@@ -7,7 +7,7 @@
 }
 
 .experienceHeader{
-    letter-spacing: 0.05em;   
+    letter-spacing: 0.0075em;  
     font-family: Arial, Helvetica, sans-serif;
     line-height: 2;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);

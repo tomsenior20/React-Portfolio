@@ -30,6 +30,7 @@ export default function About() {
                 </div>
             </div>
             <div className="experience flex flex-col md:flex-col h-[400px] md:h-[500px] my-[4rem] justify-center items-center">
+                {/* Maps Over Experience and creates new timeline item per record */}
                 {Experience.map((exp, index) => (
                     <div key={index} className="flex flex-col md:flex-row w-full md:w-[30%] justify-between around">
                         <Timeline position={index % 2 === 0 ? 'alternate' : 'alternate-reverse'} className="flex-col flex">

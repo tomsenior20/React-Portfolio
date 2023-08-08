@@ -16,14 +16,14 @@ export default function Contact() {
                 </div>
             </div>
             <div className="socialMediaLinksContainer flex flex-col md:flex-row p-3 my-10 md:my-[5rem] w-[100%] justify-center">
-                <div className="socialMediaHeader rounded-md text-center w-[80%] h-[100px] md:h-[200px] my-3 md:my-8 flex justify-center items-center w-full md:w-[35%]">
+                <div className="socialMediaHeader rounded-md text-center w-[80%] h-[100px] md:h-[200px] my-3 md:my-8 flex justify-center items-center w-[80%] md:w-[35%]">
                     <p className="socialMediaText text-white text-center text-4xl">Social Media</p>
                 </div>
-                <div className="socialArrowBeteen flex justify-center items-center h-[100px] md:h-[200px] my-3 md:my-8 w-[90%] md:w-[5%]">
+                <div className="socialArrowBeteen flex justify-center items-center h-[100px] md:h-[200px] my-3 md:my-8 w-[80%] md:w-[5%]">
                     <AiOutlineArrowRight className="text-center  w-[40px] h-[40px] text-white hidden md:flex" />
                     <AiOutlineArrowDown className="text-center  w-[40px] h-[100%] text-white flex md:hidden" />
                 </div>
-                <div className="socialMediaLinks flex rounded-md flex-row items-center justify-around w-[80%] h-[100px] md:h-[200px] my-3 md:my-8 md:w-[30%]">
+                <div className="socialMediaLinks flex rounded-md flex-row items-center justify-around w-[80%] h-[100px] md:h-[200px] my-5 md:my-8 md:w-[30%]">
                     <a href="https://www.linkedin.com/in/tom-senior20/" target="_blank" rel="noopener noreferrer">
                         <FaLinkedin className="socialIcons w-[60px] h-[60px] text-white" />
                     </a>
