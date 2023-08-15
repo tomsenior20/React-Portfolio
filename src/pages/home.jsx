@@ -6,20 +6,20 @@ import MeLogo from '../static/me.jpeg'
 
 export default function Home(params) {
     const [article, setArticle] = useState([]);
+    const apiKey = process.env.REACT_APP_API_KEY;
 
     useEffect(() => {
         setTimeout(() => {
-            fetch("https://newsapi.org/v2/everything?q=apple&from=2023-08-14&to=2023-08-14&sortBy=popularity&pageSize=3&apiKey=9b0a6399fcfb412a974f8ea181e0eb02")
+            fetch(`https://newsapi.org/v2/everything?q=apple&from=2023-08-14&to=2023-08-14&sortBy=popularity&pageSize=3&apiKey=${apiKey}`)
                 .then((response) => response.json())
                 .then((data) => {
                     setArticle(data.articles);
-                    console.log(data.articles)
                 })
                 .catch((error) => {
                     console.log(error.message);
                 })
         }, 1000);
-    }, []);
+    });
 
 
     return (
