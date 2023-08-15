@@ -1,0 +1,15 @@
+.formText{
+    letter-spacing: 0.007em;   
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1;
+    font-weight: 500;
+    color: #f1f1f1;
+}
+.formButton{
+    background: linear-gradient(90deg, rgb(29, 178, 192), rgb(27, 136, 187));
+    letter-spacing: 0.007em;   
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    font-weight: 700;
+    color: #f1f1f1;
+}

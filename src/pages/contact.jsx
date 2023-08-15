@@ -2,6 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet'
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
 import { AiOutlineArrowRight, AiOutlineArrowDown } from 'react-icons/ai';
+import Form from '../components/form';
 import '../static/contact.css'
 
 export default function Contact() {
@@ -25,13 +26,17 @@ export default function Contact() {
                 </div>
                 <div className="socialMediaLinks flex rounded-md flex-row items-center justify-around w-[80%] h-[100px] md:h-[200px] my-5 md:my-8 md:w-[30%]">
                     <a href="https://www.linkedin.com/in/tom-senior20/" target="_blank" rel="noopener noreferrer">
-                        <FaLinkedin className="socialIcons w-[60px] h-[60px] text-white" />
+                        <FaLinkedin className="socialIcons w-[60px] h-[60px] text-black" />
                     </a>
                     <a href="https://github.com/tomsenior20" target="_blank" rel="noopener noreferrer">
-                        <FaGithub className="socialIcons w-[60px] h-[60px] text-white" />
+                        <FaGithub className="socialIcons w-[60px] h-[60px] text-black" />
                     </a>
                 </div>
             </div>
+            <section className="min-h-[300px] w-full p-1 md:p-4 m-4 my-[150px]">
+                <h2 className="text-white text-3xl text-center my-4">Alternatively fill out this form</h2>
+                <Form />
+            </section>
         </>
     )
 };
