@@ -4,6 +4,7 @@ import { FaLinkedin, FaGithub } from 'react-icons/fa';
 import { AiOutlineArrowRight, AiOutlineArrowDown } from 'react-icons/ai';
 import Form from '../components/form';
 import '../static/contact.css'
+import '../static/form.css'
 
 export default function Contact() {
     return (
@@ -34,7 +35,7 @@ export default function Contact() {
                 </div>
             </div>
             <section className="min-h-[300px] w-full p-1 md:p-4 m-4 my-[150px]">
-                <h2 className="text-white text-3xl text-center my-4">Alternatively fill out this form</h2>
+                <h2 className="formText text-white text-3xl text-center my-4">Alternatively fill out this form</h2>
                 <Form />
             </section>
         </>

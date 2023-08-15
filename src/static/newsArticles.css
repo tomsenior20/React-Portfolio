@@ -1,0 +1,23 @@
+.articleHeader{
+    letter-spacing: 0.10em;   
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 2;
+    font-weight: 700;
+    color:white ;
+    text-underline-position: under;
+    text-decoration: underline;
+}
+
+.newsArticles{
+    background:rgba(101, 77, 179, 0.1);
+    margin:1rem 0;
+    padding:2rem;
+}
+
+.newsArticles:hover {
+    transform: translate(1rem) scale(1.1);
+    -webkit-transform: translate(1rem) scale(1.1);
+    -moz-transform: translate(1rem) scale(1.1);
+    -ms-transform: translate(1rem) scale(1.1);
+    -o-transform: translate(1rem) scale(1.1);
+}
