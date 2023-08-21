@@ -5,23 +5,28 @@ import '../static/newsArticles.css'
 import MeLogo from '../static/me.jpeg'
 
 export default function Home(params) {
-    const [article, setArticle] = useState([]);
-    const apiKey = process.env.REACT_APP_API_KEY;
+    const [weather, setWeather] = useState({});
 
     useEffect(() => {
-        setTimeout(() => {
-            fetch(`https://newsapi.org/v2/everything?q=apple&from=2023-08-14&to=2023-08-14&sortBy=popularity&pageSize=3&apiKey=${apiKey}`)
+        const fetchData = () => {
+            fetch("https://api.open-meteo.com/v1/forecast?latitude=53.483959&longitude=-2.244644&current_weather=true&hourly=temperature_2m,relativehumidity_2m,windspeed_10m")
                 .then((response) => response.json())
                 .then((data) => {
-                    setArticle(data.articles);
+                    setWeather(data.current_weather);
                 })
                 .catch((error) => {
                     console.log(error.message);
-                })
-        }, 1000);
-    });
+                });
+        };
 
+        fetchData();
 
+        const intervalId = setInterval(fetchData, 5 * 60 * 1000); // Fetch every 5 minutes
+
+        return () => {
+            clearInterval(intervalId);
+        };
+    }, []);
     return (
         <>
             <Helmet>
@@ -38,7 +43,7 @@ export default function Home(params) {
                 {/* Introduction title Explaining what this prioject will cover */}
                 <div className="p-8 md:p-5 m-4 flex flex-col items-center justify-center w-[100%]  md:h-[100%] md:w-[40%]">
                     <h3 className="introductionHeader text-white text-2xl word-break my-[1rem]">
-                        <span className="text-4xl">Welcome to my page, </span>
+                        <span className="introText text-4xl">Welcome to my page, </span>
                         This page is my first project using React.</h3>
                     <p className="introductionText text-white text-lg word-break my-[1rem]">
                         I will be showing and attempting my first responsive design using this framework.
@@ -47,19 +52,24 @@ export default function Home(params) {
                 </div>
             </div>
             <section className="min-h-[400px] my-[4rem] flex flex-col p-1 md:p-[3rem] w-full md:w-[80%] justify-center items-center mx-auto">
-                <h3 className="articleHeader text-3xl text-white my-[4rem]">News Articles</h3>
-                {article.map((element, index) => (
-                    <div className="newsArticles flex flex-col mx-2 w-[90%] md:w-[40%] min-h-[200px]" key={index}>
-                        <h1 className="text-white text-2xl my-2 text-center">{element.title}</h1>
-                        <ol>
-                            <li className="my-[2rem] text-center text-white">
-                                <a href={element.url}>Link To Article</a>
-                            </li>
-                        </ol>
-                        <p className="text-white text-1xl text-center">Published: {new Date(element.publishedAt).toLocaleDateString("EN-GB")}</p>
+                <h3 className="articleHeader text-3xl text-white my-[4rem]">Weather in Manchester</h3>
+                <div className="weatherContainer w-full">
+                    <div className="weatherContainer flex flex-row justify-between w-[50%] my-[2rem] mx-auto">
+                        <p className="text-2xl text-white">Temperature:</p>
+                        <p className="text-2xl text-white">{weather.temperature}</p>
                     </div>
-                ))}
+                    <div className="weatherContainer flex flex-row justify-between w-[50%] my-[2rem] mx-auto">
+                        <p className="text-2xl text-white">Wind Speed: {weather.windspeed}</p>
+                        <p className="text-2xl text-white">{weather.windspeed}</p>
+                    </div>
+                    <div className="weatherContainer flex flex-row justify-between w-[50%] my-[2rem] mx-auto">
+                        <p className="text-2xl text-white text-break">Weather Code:</p>
+                        <p className="text-2xl text-white">{weather.weathercode}</p>
+                    </div>
+                </div>
             </section>
+
+
         </>
     )
 };

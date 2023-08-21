@@ -12,13 +12,18 @@
 }
 
 .introductionHeader{
-    letter-spacing: 0.0075em;
+    letter-spacing: 0.1095em;
     font-family: Arial, Helvetica, sans-serif;
     line-height: 2;
     color:white;
     font-weight: 500;
     animation: slideIn 1s ease-in-out;
     -webkit-animation: slideIn 1s ease-in-out;
+}
+.introductionHeader::first-letter{
+    font-size: 4rem;
+    text-transform: uppercase;
+    color:rgb(104, 89, 176) !important;
 }
 
 .introductionText{
