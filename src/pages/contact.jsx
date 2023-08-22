@@ -12,7 +12,7 @@ export default function Contact() {
             <Helmet>
                 <title>Contact Page</title>
             </Helmet>
-            <div className="pageWelcomeContainer mt-[100px] min-h-[500px] md:flex-row flex-col p-3 flex w-full items-center justify-center">
+            <div className="pageWelcomeContainer min-h-[500px] md:flex-row flex-col p-3 flex w-full items-center justify-center">
                 <div className="text-center">
                     <h1 className="PageWelcomeHeader text-white text-5xl md:text-7xl ">Contact Me Page</h1>
                 </div>

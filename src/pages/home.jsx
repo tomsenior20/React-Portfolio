@@ -32,7 +32,7 @@ export default function Home(params) {
             <Helmet>
                 <title>Home Page</title>
             </Helmet>
-            <div className="mt-[150px] p-9 h-[650px] flex justify-center items-center min-h-[550px]">
+            <div className="p-9 h-[650px] flex justify-center items-center min-h-[550px]">
                 <h1 className="homeIntroductionTitle text-white text-5xl md:text-7xl text-center p-2">Welcome to My Portfolio</h1>
             </div>
             <div className="descriptionContainer flex flex-col md:flex-row p-10 my-[4rem] min-h[600px] flex justify-center items-center">

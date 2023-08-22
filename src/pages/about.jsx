@@ -20,7 +20,7 @@ export default function About() {
             <Helmet>
                 <title>About Page</title>
             </Helmet>
-            <div className="my-[100px] h-[300px] flex justify-center items-center md:h-[400px] p-3">
+            <div className="h-[300px] flex justify-center items-center md:h-[400px] p-3">
                 <h1 className="contactMainHeader text-white text-5xl md:text-7xl text-center ">About Me...</h1>
             </div>
             <div className="experienceContainer">
