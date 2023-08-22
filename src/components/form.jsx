@@ -25,13 +25,20 @@ export default function Form() {
         e.preventDefault();
 
         if (name && number) {
-            // Creates a new Person object
-            var newContact = new Person(name, number);
-            // Sets the storage item
-            localStorage.setItem("Record", JSON.stringify(newContact));
-            // Sets inputs back to null
-            setEnteredName("")
-            setEnteredNumber("");
+            // Checks to see if the record exists
+            if ("Record_" + name in localStorage) {
+                console.log("Record Exists Already")
+                setEnteredName("");
+                setEnteredNumber("");
+            } else {
+                // Creates a new Person object
+                var newContact = new Person(name, number);
+                // Sets the storage item
+                localStorage.setItem("Record_" + name, JSON.stringify(newContact));
+                // Sets inputs back to null
+                setEnteredName("")
+                setEnteredNumber("");
+            }
         } else {
             console.log('enteries null');
         }
