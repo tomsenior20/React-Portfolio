@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../static/form.css'
+import { AiFillCloseCircle } from 'react-icons/ai';
 
 // Define a class to represent a person
 class Person {
@@ -12,6 +13,10 @@ class Person {
 export default function Form() {
     const [name, setEnteredName] = useState("");
     const [number, setEnteredNumber] = useState("");
+    // Set Should show Banner Message
+    const [shouldDisplay, setshouldDisplay] = useState(false);
+    // Set SetFormSubmitMSG
+    const [message, setMessage] = useState("");
 
     const handleNameChange = (e) => {
         setEnteredName(e.target.value);
@@ -23,11 +28,12 @@ export default function Form() {
 
     const getEnteredInformation = (e) => {
         e.preventDefault();
-
+        var msg = "";
+        var banner = document.getElementById("messages");
         if (name && number) {
             // Checks to see if the record exists
             if ("Record_" + name in localStorage) {
-                console.log("Record Exists Already")
+                msg += "Record Exists Already";
                 setEnteredName("");
                 setEnteredNumber("");
             } else {
@@ -35,20 +41,40 @@ export default function Form() {
                 var newContact = new Person(name, number);
                 // Sets the storage item
                 localStorage.setItem("Record_" + name, JSON.stringify(newContact));
+                msg += 'Form Submitted';
                 // Sets inputs back to null
                 setEnteredName("")
                 setEnteredNumber("");
             }
         } else {
-            console.log('enteries null');
+            msg += 'Please Enter Valid Inputs';
         }
 
+        setMessage(msg);
+        banner.innerHTML = message;
+        setshouldDisplay(true);
+    }
 
+    const CloseBannerMessage = () => {
+        setshouldDisplay(false);
+        setMessage("");
     }
 
     return (
         <>
-            <form onSubmit={getEnteredInformation} className="formColor flex flex-col justify-content-center items-center p-1 md:p-[2rem] text-start w-full md:w-[90%] my-10 mx-auto m-h-[400px]">
+            <div className="validationMessage" style={{ display: shouldDisplay ? 'flex' : "none" }} id="banner_message">
+                {/* Message Container */}
+                <div className="message">
+                    <p id="messages">{message}</p>
+                </div>
+                {/* Button For Closing banner */}
+                <div className="close">
+                    <button onClick={CloseBannerMessage} className="btn">
+                        <AiFillCloseCircle />
+                    </button>
+                </div>
+            </div>
+            <form onSubmit={getEnteredInformation} className="formColor flex flex-col justify-content-center items-center p-1 md:p-[2rem] text-start w-full md:w-[90%] my-6 mx-auto m-h-[400px]">
                 <label className="formText rounded-md text-2xl text-black my-2 w-full md:w-[50%]">Enter Name</label>
                 <input
                     id="enteredName"

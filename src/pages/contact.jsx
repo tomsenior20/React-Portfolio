@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Helmet } from 'react-helmet'
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
 import { AiOutlineArrowRight, AiOutlineArrowDown } from 'react-icons/ai';

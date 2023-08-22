@@ -24,3 +24,39 @@
     font-weight: 700;
     color: #f1f1f1;
 }
+
+.validationMessage{
+    align-items: center;
+    background: rgba(3, 124, 180,0.5);
+    width:70%;
+    margin: 1rem auto;
+    height:10px;
+    padding:2rem;
+}
+
+.message{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width:70%;
+}
+.message p{
+    font: 18px/2 Arial, Helvetica, sans-serif;
+    letter-spacing: 0.008em;   
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    font-weight: 400;
+    color:#f1f1f1;
+}
+
+.close{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width:30%;
+}
+
+.close svg{
+    color:#f1f1f1;
+    width:2rem;
+    height:2rem;
+}

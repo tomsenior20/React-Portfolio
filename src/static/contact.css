@@ -30,6 +30,7 @@
  animation: pulse 1s ease-in;
  -webkit-animation: pulse 1s ease-in;
 }
+
 /* Creates the pulsing on Hover Animation */
 @keyframes pulse {
 0% {
