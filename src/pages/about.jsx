@@ -24,8 +24,8 @@ export default function About() {
                 <h1 className="contactMainHeader text-white text-5xl md:text-7xl text-center ">About Me...</h1>
             </div>
             <div className="experienceContainer">
-                <div className="h-[400px] md:h-[450px] w-[85%] md:w-[30%] mx-auto flex justify-center items-center">
-                    <h3 className="experienceHeader text-clip text-4xl text-white">Hi, I'm <span className="text-5xl underline decoration-indigo-500">Tom Senior </span>
+                <div className="h-[400px] md:h-[450px] w-[85%] md:w-[50%] mx-auto flex justify-center items-center">
+                    <h3 className="experienceHeader text-clip text-4xl text-white">Hi, I'm <span className="mx-1 text-5xl underline decoration-indigo-500">Tom Senior </span>
                         and i am currently undertaking a journey into software engineering</h3>
                 </div>
             </div>

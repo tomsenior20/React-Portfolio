@@ -18,7 +18,7 @@ export default function Nav() {
         setMenuOpen(false)
     }
     return (
-        <nav className="App top-0 fixed flex w-full justify-between p-5 items-center h-[100px]">
+        <nav className="App top-0 flex w-full justify-between p-5 items-center h-[100px]">
             <div className="flex justify-start items-center w-4/5 sm:w-2/5 p-3">
                 <span className="breakPoint mx-2 text-white text-2xl">{icons.startBreakPoint}</span>
                 <h1 className="navTitle text-xl md:text-3xl text-white">Tom Senior</h1>

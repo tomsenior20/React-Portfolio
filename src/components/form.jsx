@@ -41,11 +41,11 @@ export default function Form() {
 
     return (
         <>
-            <form onSubmit={getEnteredInformation} className="formColor flex flex-col justify-content-center items-center p-1 md:p-[3rem] text-start w-full md:w-[70%] my-10 mx-auto m-h-[400px]">
+            <form onSubmit={getEnteredInformation} className="formColor flex flex-col justify-content-center items-center p-1 md:p-[2rem] text-start w-full md:w-[90%] my-10 mx-auto m-h-[400px]">
                 <label className="formText rounded-md text-2xl text-black my-2 w-full md:w-[50%]">Enter Name</label>
                 <input
                     id="enteredName"
-                    className="formText rounded-md text-1xl text-start text-black my-2 w-full md:w-[50%] p-3"
+                    className="formInput rounded-md text-1xl text-start text-black my-2 w-full md:w-[50%] p-3"
                     type="text"
                     value={name}
                     placeholder="Enter Name"
@@ -54,7 +54,7 @@ export default function Form() {
                 <label className="formText rounded-md text-2xl text-black my-2 w-full md:w-[50%]">Enter Contact Number</label>
                 <input
                     id="enteredPhoneNumber"
-                    className="formText rounded-md text-1xl text-start text-black my-2 w-full md:w-[50%] p-3"
+                    className="formInput rounded-md text-1xl text-start text-black my-2 w-full md:w-[50%] p-3"
                     type="number"
                     value={number}
                     placeholder="Enter Contact Number"

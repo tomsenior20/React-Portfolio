@@ -3,7 +3,18 @@
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1;
     font-weight: 500;
-    color: #f1f1f1;
+    color:#f1f1f1;
+}
+
+.formInput{
+    letter-spacing: 0.007em;   
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1;
+    font-weight: 500;
+    color:black;
+}
+.formInput:focus{
+    outline-color: rgb(135, 172, 228);
 }
 .formButton{
     background: linear-gradient(90deg, rgb(29, 178, 192), rgb(27, 136, 187));

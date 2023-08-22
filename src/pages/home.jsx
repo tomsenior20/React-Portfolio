@@ -59,7 +59,7 @@ export default function Home(params) {
                         <p className="text-2xl text-white">{weather.temperature}</p>
                     </div>
                     <div className="weatherContainer flex flex-row justify-between w-[50%] my-[2rem] mx-auto">
-                        <p className="text-2xl text-white">Wind Speed: {weather.windspeed}</p>
+                        <p className="text-2xl text-white">Wind Speed:</p>
                         <p className="text-2xl text-white">{weather.windspeed}</p>
                     </div>
                     <div className="weatherContainer flex flex-row justify-between w-[50%] my-[2rem] mx-auto">

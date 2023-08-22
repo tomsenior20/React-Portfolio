@@ -1,8 +1,8 @@
 .socialMediaHeader,.socialMediaLinks{
-    background: linear-gradient(90deg, rgb(218, 214, 214), rgb(255, 255, 255));
+    background: linear-gradient(90deg, rgb(6, 105, 141), rgb(22, 135, 160));
     margin: auto;
     border: 1px solid rgba(143, 142, 142, 0.95);
-    color:black;
+    color:#f0f0f0;
 }
 .socialArrowBeteen{
     margin: auto;
@@ -14,7 +14,7 @@
     line-height: 2;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
     font-weight: 700;
-    color:black;
+    color:#f0f0f0;
 }
 
 .PageWelcomeHeader{
@@ -23,6 +23,7 @@
     line-height: 2;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
     font-weight: 700;  
+    color:#f0f0f0;
 }
 
 .socialIcons:hover{
