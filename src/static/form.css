@@ -37,7 +37,6 @@
 .message{
     display: flex;
     align-items: center;
-    justify-content: start;
     width:70%;
 }
 .message p{
@@ -49,8 +48,6 @@
 }
 
 .close{
-    display: flex;
-    justify-content: end;
     align-items: center;
     width:30%;
 }

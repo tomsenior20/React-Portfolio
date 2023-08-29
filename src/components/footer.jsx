@@ -2,6 +2,10 @@ import React, { useState, useEffect } from 'react'
 import '../static/footer.css'
 
 export default function Footer() {
+    const copyrightContent = {
+        fullName: "Tom Senior",
+    }
+
     const [date, setDate] = useState('')
     const [time, setTime] = useState('')
 
@@ -27,7 +31,7 @@ export default function Footer() {
         <footer className="flex flex-row justify-between items-center mt-[1rem] md:mt-[1rem] p-4 w-full mt-auto">
             <div className="flex items-center justify-center md:flex-row flex-col p-3">
                 <p className="copyrightText text-white text-lg mx-1">Copyright:</p>
-                <p className="copyrightText text-white text-lg mx-1">Tom Senior</p>
+                <p className="copyrightText text-white text-lg mx-1">{copyrightContent.fullName}</p>
             </div>
             <div className="flex md:flex-row flex-col items-center justify-center p-3">
                 <p className="footerTimeText text-white text-center text-lg mx-1">{date}</p>

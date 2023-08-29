@@ -25,11 +25,10 @@ export default function Form() {
     const handleNumberChange = (e) => {
         setEnteredNumber(e.target.value);
     }
-
+    // Handles the form submit
     const getEnteredInformation = (e) => {
         e.preventDefault();
         var msg = "";
-        var banner = document.getElementById("messages");
         if (name && number) {
             // Checks to see if the record exists
             if ("Record_" + name in localStorage) {
@@ -51,10 +50,9 @@ export default function Form() {
         }
 
         setMessage(msg);
-        banner.innerHTML = message;
         setshouldDisplay(true);
     }
-
+    // Handles Button Click to Close Banner Message
     const CloseBannerMessage = () => {
         setshouldDisplay(false);
         setMessage("");
@@ -65,10 +63,10 @@ export default function Form() {
             <div className="validationMessage" style={{ display: shouldDisplay ? 'flex' : "none" }} id="banner_message">
                 {/* Message Container */}
                 <div className="message">
-                    <p id="messages">{message}</p>
+                    <p id="messagesn" className="d-flex flex-start">{message}</p>
                 </div>
                 {/* Button For Closing banner */}
-                <div className="close">
+                <div className="close flex items-middle justify-end">
                     <button onClick={CloseBannerMessage} className="btn">
                         <AiFillCloseCircle />
                     </button>
