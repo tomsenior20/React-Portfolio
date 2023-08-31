@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet'
 import Timeline from '@mui/lab/Timeline';
 import TimelineItem from '@mui/lab/TimelineItem';
@@ -8,12 +8,19 @@ import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineDot from '@mui/lab/TimelineDot';
 
 export default function About() {
-    // Experience
-    const Experience = [
-        { Job: "Mcdonalds", TimeFrame: "2017-2019" },
-        { Job: "1st Line Support analyst", TimeFrame: "2019-2021" },
-        { Job: "Software Developer", TimeFrame: "2021-Present" }
-    ]
+    const [experiences, setExperiences] = useState([]);
+
+    const experience =
+        [
+            { Comapany: "Mcdonalds", TimeFrame: "2019-2021" },
+            { Comapany: "Atos", TimeFrame: "2021-2022" },
+            { Comapany: "Worldline", TimeFrame: "2022-Present" }
+        ]
+
+    useEffect(() => {
+        setExperiences(experience);
+    }, []);
+
 
     return (
         <>
@@ -31,7 +38,7 @@ export default function About() {
             </div>
             <div className="experience flex flex-col md:flex-col h-[400px] md:h-[500px] my-[4rem] justify-center items-center">
                 {/* Maps Over Experience and creates new timeline item per record */}
-                {Experience.map((exp, index) => (
+                {experiences.map((exp, index) => (
                     <div key={index} className="flex flex-col md:flex-row w-full md:w-[30%] justify-between around">
                         <Timeline position={index % 2 === 0 ? 'alternate' : 'alternate-reverse'} className="flex-col flex">
                             <TimelineItem>
@@ -40,7 +47,7 @@ export default function About() {
                                     <TimelineConnector />
                                 </TimelineSeparator>
                                 <TimelineContent className="text-white">
-                                    <p className="text-2xl">{exp.Job}</p>
+                                    <p className="text-2xl">{exp.Comapany}</p>
                                     <p className="text-2xl">{exp.TimeFrame}</p>
                                 </TimelineContent>
                             </TimelineItem>
